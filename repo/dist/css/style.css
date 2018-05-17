@@ -1,0 +1,278 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none
+}
+a{
+	text-decoration: none;
+}
+html,body,#root{
+	height: 100%
+}
+/* TopNav */
+.navbar{
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	 
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 300;
+}
+.nav-left{
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #32323a;
+	width: 260px;
+	font-size: 30px;
+	color: #fff;
+}
+.nav-left b{
+	color: #2dafcb;
+	margin-right: 5px;
+}
+.nav-right{
+	box-sizing: border-box;
+	background: #fff;
+	height: 60px;
+	flex-grow: 2;
+	display: flex;
+	justify-content: flex-end;
+}
+.nav-right li{
+	height: 100%;
+	box-sizing: border-box;
+	line-height: 60px;
+}
+.come{
+	cursor: pointer;
+}
+.come:hover .user{
+    display: block;
+}
+.user{
+	display: none;
+      font-weight: 400;
+      color: #333;
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      box-sizing: border-box;
+}
+.user a{
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.nav-right i{
+	margin-right: 3px;
+}
+.nav-right span{
+	margin-right: 5px;
+	color: #666;
+}
+
+/* SideNav */
+.navbar-side{
+	width: 260px;
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	background: #32323a;
+	color: #fff;
+	font-size: 14px;
+}
+.navbar-side a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+.navbar-side li{
+	width: 100%;
+	line-height: 55px;
+	border-bottom: 1px solid hsla(210,1%,42%,.19);
+}
+.navbar-side li ul li{
+	background: #000;
+	box-sizing: border-box;
+}
+.navbar-side span{
+	margin-right: 10px;
+
+}
+.navbar-side i{
+	margin-right: 15px;
+	margin-left: 10px;
+}
+.active{
+	background: #2dafcb;
+}
+
+/* layout */
+#root{
+	position: relative
+}
+#root>div{
+	height: 100%
+}
+
+/* login */
+.login{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: 210px !important;
+}
+.login div{
+	width: 350px;
+	height: 210px;
+	background: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.login span{
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+}
+.login input{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.btn{
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+    background: #337ab7;
+    border: none;
+}
+
+
+/* home */
+#page{
+	position:absolute;
+	top: 55px;
+	left: 260px;
+	right: 0;
+	padding: 20px; 
+	box-sizing: border-box;
+	z-index: 1;
+	background: #f5f5f5;
+	height: 100%
+}
+#page h1{
+	font-size: 36px;
+	font-family: inherit;
+	font-weight: 500;
+	color: inherit;
+}
+.home{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 10px;
+	box-sizing: border-box;
+
+}
+.row{
+	width: 29%;
+	height: 160px;
+	transition: all .3s;
+}
+.row:hover{
+	transform: scale(1.08)
+}
+.row a {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.home .row:nth-child(1) a{
+	background: #f0ad4e;
+}
+.home .row:nth-child(2) a{
+	background: #5cb85c;
+}
+.home .row:nth-child(3) a{
+	background: #4cb1cf;
+}
+.count{
+	font-size: 50px
+}
+.des i{
+	margin-right: 5px;
+}
+
+
+
+@media(max-width:768px){
+	.navbar{
+		display: flex;
+		flex-direction: column;
+		z-index: 222
+	}
+	.nav-left{
+		width: 100%;
+		justify-content: flex-start;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	.nav-right{
+		width: 100%;
+		height: 60px;
+		padding-left: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative
+	}
+	.nav-right ul{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.user{
+		height: 50px !important;
+		margin-top: 65px;
+	}
+	.navbar-side{
+		position: relative;
+		top: 120px;
+		width: 100%;
+	}
+	.navbar-side i{
+		margin-left: 20px;
+	}
+	#page{
+		position: relative;
+		left: 0;
+		top:120px;
+	}
+}
