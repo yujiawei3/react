@@ -74,7 +74,7 @@ class UserList extends React.Component{
 							{tableBody}
 						</tbody>
 					</table>
-					<Pagination current={this.state.pageNum}
+					<Pagination current={ this.state.pageNum }
 					total={this.state.total}
 					onChange={(pageNum)=>this.onPageNum(pageNum)}/>
 				</div>
