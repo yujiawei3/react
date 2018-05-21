@@ -177,11 +177,11 @@ html,body,#root{
 	top: 55px;
 	left: 260px;
 	right: 0;
+	bottom: 0;
 	padding: 20px; 
 	box-sizing: border-box;
 	z-index: 1;
 	background: #f5f5f5;
-	height: 100%
 }
 #page h1{
 	font-size: 36px;
@@ -252,6 +252,207 @@ td{
     padding: 8px;
     border: 1px solid #ddd;
 }
+/* product */
+.title{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.title a {
+	color: #fff;
+	background: #337ab7;
+	width: 100px;
+	height: 34px;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	text-align: center;
+	box-sizing:border-box;
+	border-radius: 4px;
+}
+.search{
+	margin-top: 25px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.search select{
+	height: 34px;
+	padding: 6px 12px;
+	color: #555;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.search>input{
+	height: 34px;
+	padding: 6px 12px;
+	color: #555;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-left: 10px;
+}
+.search button{
+	color: #333;
+	background: #fff;
+	border-color: #ccc;
+	margin-left: 10px;
+	padding: 6px 12px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+      border-radius: 4px;
+	cursor: pointer;
+}
+.table a{
+	color: #337ab7;
+	margin: 5px;
+}
+.state{
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+.state button{
+	color: #fff;
+	background: #f0ad4e;
+	padding: 3px;
+	font-size: 12px;
+	border-radius: 3px;
+	border: none;
+}
+/* productsave */
+.shop{
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+.shop-list{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	width: 77%;
+	align-items: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.shop-list input{
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    width:60%;
+}
+.shop-list span{
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+}
+.shop-list select{
+	padding: 6px 12px;
+	box-sizing: border-box;
+	color: #555;
+	font-size: 14px;
+	border-radius: 4px;
+	width: 25%;
+	height: 34px;
+	background: #fff;
+	  border: 1px solid #ccc;
+	  margin-left: 10px;
+}
+.shop-list .price{
+	border: 1px solid #ccc;
+	width: 34px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 0 4px 4px 0;
+	box-sizing: border-box;
+}
+.desc input{
+	border-radius: 4px 0 0 4px;
+	border-right: none;
+	width: 30%;
+}
+.ification{
+ 	width: 90%;
+ 	display: flex;
+ 	flex-direction: row;
+ }
+.file{
+	font-weight: normal !important;
+}
+.shop-list .sub{
+	background: #337ab7;
+	color: #fff;
+	padding: 6px 12px;
+	font-size: 14px;  
+	border-radius: 4px;
+	box-sizing: border-box;
+	border: none;
+	margin-left: 68px;
+	height: 34px ;
+	width: 54px ;
+}
+.img{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.img button{
+	margin: 10px 70px;
+}
+.upload{
+	padding-left: 70px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.img img{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+}
+.upload{
+	display: flex;
+	flex-direction: row;
+}
+.upload div{
+	width: 80px;
+	height: 80px;
+	position: relative;
+	margin-left: 10px;
+}
+.fa-close{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	font-size: 50px;
+	color: #aaa;
+	background: rgba(0,0,0,.3);
+	display: block;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	display: none;
+}
+.upload div:hover .fa-close{
+	display: block
+}
+.detail{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.rich-editor{
+	margin-top: 10px;
+}
 
 
 @media(max-width:768px){
@@ -296,5 +497,47 @@ td{
 		position: relative;
 		left: 0;
 		top:120px;
+	}
+	
+	 
+}
+@media(max-width:1050px){
+	.shop{
+		padding: 10px;
+	}
+	.shop-list{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.shop-list input , .shop-list span {
+		width: 100%
+	}
+	 .shop-list span{
+	 	padding-left: 10px;
+	 	padding-bottom: 10px;
+	 	box-sizing: border-box;
+	 }
+	 .shop-list select{
+	 	width: 30%
+	 }
+	 .desc input{
+	 	width: 90%;
+	 }
+	 .ification{
+	 	width: 100%
+	 }
+	 .shop-list .sub{
+	 	margin-left: 10px;
+	 }
+	 .img button{
+		margin: 10px;
+	}
+	.upload{
+		padding-left: 0;
 	}
 }
