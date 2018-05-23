@@ -177,7 +177,6 @@ html,body,#root{
 	top: 55px;
 	left: 260px;
 	right: 0;
-	bottom: 0;
 	padding: 20px; 
 	box-sizing: border-box;
 	z-index: 1;
@@ -257,6 +256,7 @@ td{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 }
 .title a {
 	color: #fff;
@@ -453,7 +453,34 @@ td{
 .rich-editor{
 	margin-top: 10px;
 }
+.add{
+	width: 28% !important;
+}
+.shop-list p{
+	display: inline-block;
+	line-height: 17px;
+	padding: 6px 12px;
+	font-size: 14px;
+	color: #555;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-left: 10px;
+	width: 60%;
+}
 
+.shopDetail{
+	display: inline-block;
+	width: 100px;
+	box-sizing: border-box;
+	text-align: right;
+}
+.p-img{
+	display: block;
+	width: 80px;
+	height: 80px
+}
 
 @media(max-width:768px){
 	.navbar{
@@ -498,9 +525,9 @@ td{
 		left: 0;
 		top:120px;
 	}
-	
-	 
 }
+
+
 @media(max-width:1050px){
 	.shop{
 		padding: 10px;
@@ -539,5 +566,8 @@ td{
 	}
 	.upload{
 		padding-left: 0;
+	}
+	.shopDetail{
+		text-align: left
 	}
 }

@@ -119,7 +119,7 @@ class ProductSave extends React.Component{
 	render(){
 		return (
 			<div id="page">
-				<PageTitle title={"商品管理 -- 添加商品"}/>
+				<PageTitle title={this.state.id ? '编辑商品' : '添加商品'} />
 				<div className="shop">
 					<div className="shop-list">
 						<span>商品名称</span>

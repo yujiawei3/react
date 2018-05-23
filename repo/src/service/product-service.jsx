@@ -54,7 +54,7 @@ class Product{
               }
         })
     }
-    //
+    // 检查保存商品的表单数据
     checkProduct(product){
              // 判断用户名为空
             if(typeof product.name !== 'string' || product.name.length ===0){
@@ -96,6 +96,17 @@ class Product{
                   msg:"验证通过"
             }
         }
+         // 根据父品类id获取品类列表
+        getCategoryList(parentCategoryId){
+              return _mm.request({
+                  type    : 'post',
+                  url     : '/manage/category/get_category.do',
+                  data    : {
+                      categoryId : parentCategoryId || 0
+                  }
+              });
+        }
+        // 保存商品
         saveProduct(product){
                 return _mm.request({
                       type    : 'post',
@@ -103,6 +114,22 @@ class Product{
                       data    : product
                 });
         }
+      // 修改品类名称
+      updateCategoryName(category){
+            return _mm.request({
+                type : 'post',
+                url  : '/manage/category/set_category_name.do',
+                data : category
+            });
+      }
+       // 新增品类
+      saveCategory(category){
+          return _mm.request({
+              type    : 'post',
+              url     : '/manage/category/add_category.do',
+              data    : category
+          });
+      }
 }
 
 export default Product;
